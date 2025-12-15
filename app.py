@@ -24,7 +24,7 @@ def load_model():
     Load the trained YOLOv8 model.
     Cached to avoid reloading on every interaction.
     """
-    return YOLO("runs/detect/train4/weights/best.pt")
+    return YOLO("best.pt")
 
 model = load_model()
 

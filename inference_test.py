@@ -1,6 +1,6 @@
 from ultralytics import YOLO
 
-model = YOLO("runs/detect/train4/weights/best.pt")
+model = YOLO("best.pt")
 
 results = model(
     "dataset/test/images",
@@ -11,4 +11,4 @@ results = model(
 for r in results:
     print(r.names)
 
-print("Check runs/detect/predict/")
+print("Inference tested successfully")

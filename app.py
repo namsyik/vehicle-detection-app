@@ -1,10 +1,12 @@
+import os
+os.environ["OPENCV_VIDEOIO_PRIORITY_MSMF"] = "0"    
+
 import streamlit as st
 from ultralytics import YOLO
 from PIL import Image
 import numpy as np
 import cv2
 import tempfile
-import os
 
 # ---------------------------------------------------------
 # Page Configuration
@@ -153,7 +155,6 @@ if mode == "Video":
 
         # ---- CLEANUP (ORDER MATTERS) ----
         cap.release()
-        cv2.destroyAllWindows()
 
         try:
             os.remove(video_path)
